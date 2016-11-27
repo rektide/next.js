@@ -165,7 +165,11 @@ export default async function createCompiler (dir, { hotReload = false, dev = fa
       ].concat(
         (process.env.NODE_PATH || '')
         .split(process.platform === 'win32' ? ';' : ':')
-      )
+      ),
+      alias: {
+        'react': 'preact-compat',
+        'react-dom': 'preact-compat'
+      }
     },
     resolveLoader: {
       root: [
