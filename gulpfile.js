@@ -14,7 +14,13 @@ const babelOptions = {
     'transform-async-to-generator',
     'transform-object-rest-spread',
     'transform-class-properties',
-    'transform-runtime'
+    'transform-runtime',
+    ['module-resolver', {
+      alias: {
+        'react': 'preact-compat',
+        'react-dom': 'preact-compat'
+      }
+    }]
   ]
 }
 
